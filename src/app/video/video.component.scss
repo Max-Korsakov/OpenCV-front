@@ -1,0 +1,108 @@
+
+canvas {
+  border: 5px solid lightgray;
+  border-radius: 15px;
+  }
+
+  .container{
+    display: flex;
+    justify-content: flex-end;
+  }
+  .hidden {
+    visibility: hidden;
+  }
+  #video{
+    border: 5px solid lightgray;
+    border-radius: 15px;
+  }
+  .text-center {
+    text-align: center;
+  }
+
+  .video-container{
+    width: 40%;
+    box-sizing: border-box;
+  }
+
+  .face-container{
+    width: 50%;
+    max-height: 600px;
+    min-height: 600px;
+    box-sizing: border-box;
+    border: 5px solid lightgray;
+    border-radius: 15px;
+    overflow-y: auto;
+    background-color: white;
+  }
+
+  .document-container{
+    width: 40%;
+    max-height: 250px;
+    min-height: 250px;
+    box-sizing: border-box;
+    border: 5px solid lightgray;
+    border-radius: 15px;
+    overflow-y: auto;
+    background-color: white;
+  }
+
+  .button-container{
+    position: absolute;
+    top: 110px;
+    right: 30px;
+  }
+
+  .isMatched{
+      border-color: rgb(101, 167, 26) !important;
+  }
+
+  .spinner-border{
+    position: absolute;
+    bottom: 150px;
+    right: 450px;
+  }
+
+  img{
+    margin: 30px;
+  }
+  div {
+    margin: 10px;
+  }
+
+
+  .btn{
+    margin: 10px 10px;
+  }
+  .center-block {
+    display: block;
+    margin: auto;
+    position: absolute;
+    top: 130px;
+    right: 300px;
+  }
+  label {
+    padding-right: 10px;
+    width: 25%;
+    vertical-align: top;
+    font: 16px 'Lucida Grande', sans-serif;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: rgba(104, 103, 103, 0.26);
+    border-radius: 10px;
+    background-clip: content-box;
+    border: 2px solid transparent;
+  }
+
+  .result{
+    position: absolute;
+    bottom: 200px;
+    right: 300px;
+    color: rgba(161, 240, 69, 1);
+    font-size: 50px;
+    font-weight: bold;
+  }

@@ -1,0 +1,51 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand navbar-text" href="#">Realtime face detection demo</a>
+</nav>
+<div id="container">
+  <div class="video-container">
+    <canvas
+      [class.hidden]="videoShow"
+      class="center-block"
+      [class.isMatched]="showResult"
+      id="canvasOutput"
+      width="320"
+      height="240"
+    ></canvas>
+    <video
+      id="video"
+      class="center-block"
+      [class.hidden]="!videoShow"
+      [class.isMatched]="showResult"
+    >
+      Your browser does not support the video tag.
+    </video>
+    <div class="button-container"></div>
+  </div>
+  <div class="face-container"></div>
+  <div class="button-container">
+    <div class="btn-group-vertical">
+      <button
+        type="button"
+        class="btn btn-primary"
+        (click)="processFaceCapturing()"
+      >
+        Capture face
+      </button>
+      <button
+        type="button"
+        class="btn btn-primary"
+        (click)="processDocumentPhoto()"
+      >
+        Capture document photo
+      </button>
+      <!-- <button type="button" class="btn btn-primary" (click)="checkPhoto()">
+        Check
+      </button> -->
+    </div>
+  </div>
+  <div class="document-container"></div>
+  <div *ngIf='loading' class="spinner-border text-primary" style="width: 8rem; height: 8rem;" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
+  <div class="result" *ngIf="showResult">Matched: 89,754%</div>
+</div>
