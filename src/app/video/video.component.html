@@ -1,10 +1,18 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand navbar-text" href="#">Realtime face detection demo</a>
+  <a class="navbar-brand navbar-text" href="#">Sencetive data site hiding demo</a>
 </nav>
-<div id="container">
+<div class="signup-block" *ngIf="!singUpState">
+  <input [(ngModel)]="email">
+  <input [(ngModel)]="password">
+  <input type="checkbox" [(ngModel)]="enhense">
+  <span>Enhensed security (camera will be turn on, video processed in browser only)</span>
+  <button (click)="signUp()">Sing up</button>
+</div>
+<div *ngIf="singUpState" [class.blur]="!isDetected && enhense" id="container">
+  <button (click)="signOut()">Sing out</button>
   <div class="video-container">
     <canvas
-      [class.hidden]="videoShow"
+      [class.hidden]="!videoShow"
       class="center-block"
       [class.isMatched]="showResult"
       id="canvasOutput"
@@ -21,23 +29,28 @@
     </video>
     <div class="button-container"></div>
   </div>
-  <div class="face-container"></div>
+  <div class="face-container">
+    <h1>My account information</h1>
+    <div>USD - 500 000 000$</div>
+    <div>Russian rubles - 100 000 000 rub</div>
+    <div>BTK - 25,654</div>
+  </div>
   <div class="button-container">
     <div class="btn-group-vertical">
-      <button
+      <!-- <button
         type="button"
         class="btn btn-primary"
         (click)="processFaceCapturing()"
       >
         Capture face
-      </button>
-      <button
+      </button> -->
+      <!-- <button
         type="button"
         class="btn btn-primary"
-        (click)="processDocumentPhoto()"
+
       >
         Capture document photo
-      </button>
+      </button> -->
       <!-- <button type="button" class="btn btn-primary" (click)="checkPhoto()">
         Check
       </button> -->

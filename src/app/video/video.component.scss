@@ -19,6 +19,18 @@ canvas {
     text-align: center;
   }
 
+  .signup-block {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    justify-content: space-around;
+    height: 200px;
+  }
+
+  .blur {
+    filter: blur(10px);
+  }
+
   .video-container{
     width: 40%;
     box-sizing: border-box;
@@ -90,7 +102,7 @@ canvas {
   ::-webkit-scrollbar {
     width: 10px;
   }
-  
+
   ::-webkit-scrollbar-thumb {
     background-color: rgba(104, 103, 103, 0.26);
     border-radius: 10px;
